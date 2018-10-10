@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+Author: Emily Stanek
+Student ID: 000320919
+Created: Sept 24, 2018
+
+This HTML document gathers input from the user through the form and sends
+it the formValidation.php
+-->
+<html>
+    <head>
+        <title>Build a Shopping List</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <style>
+            body {
+                background-image: url("background.png");
+                font-family: sans-serif;
+                color: #3f3f3f;
+            }
+            h1{
+                color: #cc66ff;
+                font-size: 24px;
+            }
+            label {
+                font-family: monospace;
+                display: inline-block;
+                float: left;
+                clear: left;
+                width: 250px;
+                text-align: right;
+            }
+            form {
+                padding-top: 20px;
+            }
+            .textInput {
+                display: inline-block;
+                float: left;
+                margin-left: 10px;
+            }
+            #submitButton { 
+               border: 2px solid #cc66ff;
+               padding: 10px;
+               border-radius: 10px;
+               font-size: 14px;
+               text-align: center;
+               margin-top: 25px;
+               margin-left: 50%;
+               
+            }
+            #inputContatiner {
+                margin-top: 50px;
+                margin-left: 30%;
+                background-color: white;
+                width: 40%;
+                height: 300px;
+                text-align: center;
+                line-height: 1.5;
+                border: 2px solid cyan;
+                border-radius: 10px;
+                box-shadow: 0px 3px 15px #666666;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="inputContatiner">
+            <h1>Build a Shopping List</h1>
+            <form action="formValidation.php" method="GET">
+                <label>Store Name: </label><input class="textInput" type="text" name="storeName" required="">
+                <br>
+                <label>Street Address: </label><input class="textInput" type="text" name="address" required="">
+                <br>
+                <label>City: </label><input class="textInput" type="text" name="city" required="">
+                <br>
+                <label>Postal Code: </label><input class="textInput" type="text" name="postalCode" required="">
+                <br>
+                <input type="submit" id="submitButton">
+            </form>
+            
+        </div>
+    </body>
+</html>
